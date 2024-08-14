@@ -14,7 +14,7 @@ public class CustomJwtAuthenticationProvider  implements AuthenticationProvider 
         String token = String.valueOf(authentication.getCredentials());
 
         try {
-            if(token !=null || !token.isEmpty()) {
+            if(token !=null && !token.isEmpty()) {
                 BearerToken bearerToken =   new BearerToken(token); // BearerToken is a custom implementation of Authentication
                 bearerToken.setAuthenticated(true);
                 return bearerToken;

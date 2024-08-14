@@ -1,0 +1,10 @@
+spring:
+   application:
+      name: springwebsecurity
+security:
+   whitelist:
+      urls:
+         - /api/**
+         - /login
+         - /register
+

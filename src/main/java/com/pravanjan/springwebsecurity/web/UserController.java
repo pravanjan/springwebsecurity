@@ -1,14 +1,12 @@
 package com.pravanjan.springwebsecurity.web;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping(path = "/api")
 public class UserController {
-    @GetMapping("/")
-    public String index() {
-        return "Welcome to the home page!";
-    }
 
     @GetMapping("/getUserName")
     public String getUserName() {
@@ -19,5 +17,7 @@ public class UserController {
     public String adminMessage() {
         return "Hello Admin";
     }
+
+
 
 }
